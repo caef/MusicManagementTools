@@ -1,0 +1,8 @@
+pylint configuration
+
+https://docs.microsoft.com/en-us/visualstudio/python/linting-python-code?view=vs-2017
+
+to modify limits
+
+[DESIGN]
+max-attributes=7			to fix:    too-many-instance-attributes   message

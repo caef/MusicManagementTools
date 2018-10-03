@@ -1,0 +1,77 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7ea80ec4-f6c5-46dd-a4ca-e98eb833b265</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>MusicCatalogCreation.py</StartupFile>
+    <SearchPath>C:\Program Files\Python36\Scripts</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>MusicCatalogCreation</Name>
+    <RootNamespace>MusicCatalogCreation</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterId>Global|PythonCore|3.7</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DB\Album.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AlbumFileProcessor.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DB\__init__.py" />
+    <Compile Include="Exceptions.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\AppSettings.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CatalogManager.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\Database.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DB\Track.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GlobalClass.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MusicCatalogCreation.py" />
+    <Compile Include="Util\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".pylintrc" />
+    <Content Include="config.ini" />
+    <Content Include="mypy.ini" />
+    <Content Include="Notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DB\" />
+    <Folder Include="Util\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
